@@ -1,5 +1,6 @@
 package com.qa.main;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Runner {
@@ -8,6 +9,9 @@ public class Runner {
 //	All of these methods should take two numbers as parameters.
 //	Create a menu to ask the user which of the four methods they wish to use, then take the numbers as user input
 //	for the operation and output the result back to the user.
+	
+//	Using the prior project, take the division method and add exception handling for any attempts to divide by 0.
+//	Stretch goal: Add exception handling for type mismatch.
 
 	public static Scanner scanner = new Scanner(System.in);
 
@@ -27,12 +31,16 @@ public class Runner {
 			int a;
 			int b;
 			switch (result) {
+				
+				
 			case 1:
-				System.out.println("Enter the first number you wish to add: ");
-				a = scanner.nextInt();
-				System.out.print("Enter the second number you wish to add: ");
-				b = scanner.nextInt();
-				System.out.print(decoration + "\nAnswer: " + Calculator.add(a, b) + "\n\n");
+				try {
+					System.out.println("Enter the first number you wish to add: ");
+					a = scanner.nextInt();
+				}
+				catch(InputMismatchException e) {
+					System.out.println("Invalid Number! Please try again!");
+				}
 				break;
 			case 2:
 				System.out.println("Enter the first number you wish to subract: ");

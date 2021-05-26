@@ -16,7 +16,7 @@ public class Calculator {
 
 	}
 	
-	public static int divi(int a, int b) {
+	public static int divi(int a, int b) throws ArithmeticException {
 		return a / b;
 
 	}
