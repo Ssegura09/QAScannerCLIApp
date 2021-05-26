@@ -83,7 +83,7 @@ public class Runner {
 				break;
 
 			default:
-				System.out.println("Please enter a valid number");
+				System.out.println("Unvalid number Selected, Goodbye!");
 				flag = false;
 				break;
 			}
