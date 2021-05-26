@@ -1,1 +1,1 @@
-# QAScannerCLIApp
+# QAScanner CLI App
