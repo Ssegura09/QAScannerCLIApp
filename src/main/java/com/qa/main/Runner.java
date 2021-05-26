@@ -55,6 +55,10 @@ public class Runner {
 				b = scanner.nextInt();
 				System.out.print(decoration + "\nAnswer: " + Calculator.divi(a, b) + "\n\n");
 				break;
+			default:
+				System.out.println("Please enter a valid number");
+				flag = false;
+				break;
 			}
 
 		} while (flag);
